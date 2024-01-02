@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">Post:</label>
+        <br>
+        <input type="text" name="post">
+        <br>
+        <input type="submit" value="Enter">
+    </form>
+    {% for post in posts %}
+      <p>{{ post.post }}</p>
+    {% endfor %}
+</body>
+</html>
